@@ -1,12 +1,27 @@
 import React from "react";
 
-function Task() {
+function Task({name,category}) {
+
+  const handleSubmit = (e)=> {
+      e.preventDefault();
+  }
+
+  const deleteBT = (e)=> {
+      e.preventDefault()
+  }
+
   return (
+    <form onSubmit={handleSubmit}>
     <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+      <ul>
+        
+        Text = {name} Categoty = {category}
+        
+      </ul>
+      <button className="delete" onClick={deleteBT}>X</button>
     </div>
+    </form>
+   
   );
 }
 
